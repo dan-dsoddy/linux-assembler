@@ -3,8 +3,8 @@
 // compile:
 // as execve_id.s -o execve_id.o
 // ld execve_id.o -o execve_id
-// 38 bytes long..
-
+// 35 bytes long..
+// see test.c  for shellcoding tester..
 
 .section .text
 .globl _start
