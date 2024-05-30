@@ -2,7 +2,8 @@
  * test-sh.c
  * dan.dsod@gmail.com
  * tests the execve_sh.s shellcode
- * compile: gcc test-sh.c -o test-sh -fno-stack-protector -z execstack
+ * I'm a bit old school and use assert to make executable stack
+ * compile: gcc test-sh.c -o test-sh -fno-stack-protector
 */
 
 

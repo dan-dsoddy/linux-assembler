@@ -2,7 +2,8 @@
  * test.c
  * execve /usr/bin/id shellcode tester.. 
  * this is the shellcode test for execve_id1.s
- * compile: gcc test.c -o test -fno-stack-protector -z execstack
+ * I'm a bit old school and use assert to make executable stack
+ * compile: gcc test.c -o test -fno-stack-protector
  * dan.dsod@gmail.com
 */
 
