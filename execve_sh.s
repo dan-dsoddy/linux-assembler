@@ -22,6 +22,5 @@ _start:
 	push %rsp
 	pop %rdi
 	xor %rsi, %rsi
-	push %rsi
 	syscall
 
