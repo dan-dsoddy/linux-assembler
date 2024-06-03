@@ -3,7 +3,7 @@
 // compile:
 // as execve_id.s -o execve_id.o
 // ld execve_id.o -o execve_id
-// 35 bytes long..
+// 34 bytes long..
 // see test.c  for shellcoding tester..
 
 .section .text
@@ -11,7 +11,7 @@
 _start:
 	push   $0x3b
 	pop    %rax
-	cltd
+	cltd			// cheap asm golfing to 0 rdx..
 	push %rdx
 	// lets push /usr/bin/id into rbx in 2 parts and
 	// avoid nulls.. to do this we use
@@ -23,5 +23,5 @@ _start:
 	push %rdi
 	push %rsp
 	pop %rdi
-	xor %rsi, %rsi
+	xor %rsi, %rsi			// null out rsi reg..
 	syscall
