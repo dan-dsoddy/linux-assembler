@@ -13,9 +13,9 @@ _start:
 	pop    %rax
 	cltd			// cheap asm golfing to 0 rdx..
 	push %rdx
-	// lets push /usr/bin/id into rbx in 2 parts and
+	// lets push /usr/bin/id into rdi in 2 parts and
 	// avoid nulls.. to do this we use
-	// //bin/id = 64692f6e69622f2f 
+	// //bin/id = 64692f6e69622f2f
 	// /////usr = 7273752f2f2f2f2f
 	movabs $0x64692f6e69622f2f, %rdi
 	push %rdi
